@@ -1,0 +1,38 @@
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+%time {
+    .minutes {
+        position: absolute;
+        left: 0;
+
+        &::after {
+            content: ":";
+            position: absolute;
+            line-height: 1;
+            margin-left: 2%;
+        }
+    }
+
+    .seconds {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::after {
+            position: absolute;
+            content: ".";
+            line-height: 1;
+        }
+    }
+
+    .milliseconds {
+        position: absolute;
+        right: 0;
+    }
+}

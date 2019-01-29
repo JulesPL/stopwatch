@@ -1,0 +1,29 @@
+.display {
+    padding: 26px 46px 46px;
+    border-bottom: 1px solid $blue;
+    background: $white;
+
+    .lapCount {
+        font-size: 22px;
+        line-height: (26/22);
+        font-weight: normal;
+        float: right;
+        color: $grey;
+        width: 92px;
+        height: 26px;
+        position: relative;
+        @extend %time;
+    }
+
+    .totalCount {
+        font-weight: 200;
+        font-size: 72px;
+        line-height: (86/72);
+        color: $black;
+        width: 284px;
+        height: 86px;
+        position: relative;
+        margin-top: 26px;
+        @extend %time;
+    }
+}
