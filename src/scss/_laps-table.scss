@@ -1,0 +1,28 @@
+.lapsTable {
+    width: 360px;
+    margin-left: 15px;
+    height: 260px;
+    overflow: scroll;
+
+    .lapRow {
+        @extend %clearfix;
+        padding: 6px 45px 10px 30px;
+        border-bottom: 1px solid $blue;
+        font-weight: normal;
+        height: 39px;
+
+        .lapLabel {
+            float: left;
+            font-size: 17px;
+            color: $grey;
+            width: 60px;
+        }
+
+        .lapTime {
+            float: right;
+            font-size: 22px;
+            color: $black;
+            width: 95px;
+        }
+    }
+}
