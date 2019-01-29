@@ -1,0 +1,44 @@
+.controls {
+    padding: 20px 57px;
+    @extend %clearfix;
+
+    .half {
+        display: inline-block;
+        position: relative;
+        float: left;
+
+        &:last-child {
+            float: right;
+        }
+    }
+
+    button {
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        border: none;
+        background: $white;
+        font-size: 17px;
+        cursor: pointer;
+        color: $black;
+        font-weight: normal;
+
+        &.disabled {
+            color: $bluegrey;
+            background: $off-white;
+            cursor: default;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+#startBtn {
+    color: $green;
+}
+
+#stopBtn {
+    color: $red;
+}
