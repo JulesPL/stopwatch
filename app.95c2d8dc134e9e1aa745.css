@@ -1,0 +1,267 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.controls:after, .lapsTable .lapRow:after, .footer:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.display .lapCount .minutes, .display .totalCount .minutes {
+  position: absolute;
+  left: 0; }
+  .display .lapCount .minutes::after, .display .totalCount .minutes::after {
+    content: ":";
+    position: absolute;
+    line-height: 1;
+    margin-left: 2%; }
+
+.display .lapCount .seconds, .display .totalCount .seconds {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+  .display .lapCount .seconds::after, .display .totalCount .seconds::after {
+    position: absolute;
+    content: ".";
+    line-height: 1; }
+
+.display .lapCount .milliseconds, .display .totalCount .milliseconds {
+  position: absolute;
+  right: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'SF UI Display', 'Helvetica Neue', Helvetica, sans-serif;
+  width: 375px;
+  margin: auto;
+  text-align: center;
+  background: #f1f1f5;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2); }
+
+.header {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 32px 0 11px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #b4b4b8; }
+
+.display {
+  padding: 26px 46px 46px;
+  border-bottom: 1px solid #d2d2d6;
+  background: #ffffff; }
+  .display .lapCount {
+    font-size: 22px;
+    line-height: 1.18182;
+    font-weight: normal;
+    float: right;
+    color: #8b8b8b;
+    width: 92px;
+    height: 26px;
+    position: relative; }
+  .display .totalCount {
+    font-weight: 200;
+    font-size: 72px;
+    line-height: 1.19444;
+    color: #000000;
+    width: 284px;
+    height: 86px;
+    position: relative;
+    margin-top: 26px; }
+
+.controls {
+  padding: 20px 57px; }
+  .controls .half {
+    display: inline-block;
+    position: relative;
+    float: left; }
+    .controls .half:last-child {
+      float: right; }
+  .controls button {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff;
+    font-size: 17px;
+    cursor: pointer;
+    color: #000000;
+    font-weight: normal; }
+    .controls button.disabled {
+      color: #b4b4b8;
+      background: #f8f8f8;
+      cursor: default; }
+  .controls .hidden {
+    display: none; }
+
+#startBtn {
+  color: #5cdc74; }
+
+#stopBtn {
+  color: #fc4840; }
+
+.lapsTable {
+  width: 360px;
+  margin-left: 15px;
+  height: 260px;
+  overflow: scroll; }
+  .lapsTable .lapRow {
+    padding: 6px 45px 10px 30px;
+    border-bottom: 1px solid #d2d2d6;
+    font-weight: normal;
+    height: 39px; }
+    .lapsTable .lapRow .lapLabel {
+      float: left;
+      font-size: 17px;
+      color: #8b8b8b;
+      width: 60px; }
+    .lapsTable .lapRow .lapTime {
+      float: right;
+      font-size: 22px;
+      color: #000000;
+      width: 95px; }
+
+.footer {
+  background: #f8f8f8;
+  border-top: 1px solid #b4b4b8;
+  box-shadow: 0 -15px 30px #d2d2d6;
+  padding: 21px 15px 15px;
+  font-weight: normal; }
+  .footer .legal {
+    font-size: 12px;
+    color: #8b8b8b;
+    text-align: center;
+    margin: auto; }
+  .footer .heart::before {
+    content: "\2764";
+    color: #fc4840; }
+
