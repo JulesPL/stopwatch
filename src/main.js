@@ -1,16 +1,16 @@
-import "../scss/app.scss"
+import "./scss/app.scss"
 
-import { Stopwatch } from "./model/stopwatch"
+import { Stopwatch } from "./js/model/stopwatch"
 
-import { DOMData } from "./helpers/DOMData"
+import { DOMData } from "./js/helpers/DOMData"
 
-import { StopwatchControlsView } from "./view/StopwatchControlsView"
-import { StopwatchControlsController } from "./controller/StopwatchControlsController"
+import { StopwatchControlsView } from "./js/view/StopwatchControlsView"
+import { StopwatchControlsController } from "./js/controller/StopwatchControlsController"
 
-import { LapTimeView } from "./view/LapTimeView"
-import { TotalTimeView } from "./view/TotalTimeView"
+import { LapTimeView } from "./js/view/LapTimeView"
+import { TotalTimeView } from "./js/view/TotalTimeView"
 
-import { LapsTableView } from "./view/LapsTableView"
+import { LapsTableView } from "./js/view/LapsTableView"
 
 const stopwatch = new Stopwatch()
 
